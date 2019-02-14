@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Listado from './Listado';
+import List from './List';
 
 class Posts extends Component {
      state = {  }
@@ -7,9 +7,9 @@ class Posts extends Component {
           return (
                <div className="col-12 col-md-8">
                     <h2 className="text-center">Posts</h2>
-                    <Listado 
+                    <List 
                          posts={this.props.posts}
-                         borrarPost={this.props.borrarPost}
+                         deletePost={this.props.deletePost}
                     />
                </div>
            );

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Post from './Post';
 
-class Listado extends Component {
+class List extends Component {
 
-     mostrarPosts = () => {
+     showPosts = () => {
           const posts = this.props.posts;
 
           if(posts.length === 0) return null;
@@ -14,7 +14,7 @@ class Listado extends Component {
                          <Post
                               key={post}
                               info={this.props.posts[post]}
-                              borrarPost={this.props.borrarPost}
+                              deletePost={this.props.deletePost}
                          />
                     ))}
                </React.Fragment>
@@ -27,16 +27,16 @@ class Listado extends Component {
                     <thead>
                          <tr> 
                               <th scope="col">ID</th>
-                              <th scope="col">Titulo</th>
-                              <th scope="col">Acciones</th>
+                              <th scope="col">Title</th>
+                              <th scope="col">Actions</th>
                          </tr> 
                     </thead>
                     <tbody>
-                         {this.mostrarPosts() }
+                         {this.showPosts() }
                     </tbody>
                </table>
            )
      }
 }
  
-export default Listado;
+export default List;
